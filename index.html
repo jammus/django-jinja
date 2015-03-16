@@ -512,6 +512,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_differences">5. Differences</a>
 <ul class="sectlevel2">
 <li><a href="#_url_reversing">5.1. Url reversing</a></li>
+<li><a href="#_static_files">5.2. Static files</a></li>
+<li><a href="#_i18n_support">5.3. i18n support</a></li>
+<li><a href="#_registring_filters_in_a_django_way">5.4. Registring filters in a "django" way.</a></li>
+<li><a href="#_render_4xx_500_pages_with_jinja">5.5. Render 4xx/500 pages with jinja</a></li>
 </ul>
 </li>
 <li><a href="#_known_issues">6. Known Issues</a></li>
@@ -1010,8 +1014,9 @@ if executing url in one variable. With jinja2 you can use the set template tag f
 <pre class="pygments highlight"><code data-lang="html+jinja"><span class="tok-cp">{%</span> <span class="tok-k">set</span> <span class="tok-nv">myurl</span><span class="tok-o">=</span><span class="tok-nv">url</span><span class="tok-o">(</span><span class="tok-s2">&quot;ns:name&quot;</span><span class="tok-o">,</span> <span class="tok-nv">pk</span><span class="tok-o">=</span><span class="tok-nv">obj.pk</span><span class="tok-o">)</span> <span class="tok-cp">%}</span></code></pre>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_static_files">5.1.1. Static files</h4>
+</div>
+<div class="sect2">
+<h3 id="_static_files">5.2. Static files</h3>
 <div class="paragraph">
 <p>Like urls, the static files can be resolved with simple <code>static</code> function available globally
 in jinja context:</p>
@@ -1023,8 +1028,8 @@ in jinja context:</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_i18n_support">5.1.2. i18n support</h4>
+<div class="sect2">
+<h3 id="_i18n_support">5.3. i18n support</h3>
 <div class="paragraph">
 <p>django-jinja inherits the jinja2 approach for handle translation strings. You can read more about
 it here: <a href="http://jinja.pocoo.org/docs/dev/templates/#i18n" class="bare">http://jinja.pocoo.org/docs/dev/templates/#i18n</a></p>
@@ -1046,8 +1051,8 @@ with jinja2 i18n tags.</p>
 <p>If you want more django like i18n related tags, you can use extensions from <a href="https://github.com/MoritzS/jinja2-django-tags" class="bare">https://github.com/MoritzS/jinja2-django-tags</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_registring_filters_in_a_django_way">5.1.3. Registring filters in a "django" way.</h4>
+<div class="sect2">
+<h3 id="_registring_filters_in_a_django_way">5.4. Registring filters in a "django" way.</h3>
 <div class="paragraph">
 <p>django-jinja comes with facilities for loading template filters, globals and tests
 from django applications.</p>
@@ -1104,8 +1109,8 @@ from django applications.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_render_4xx_500_pages_with_jinja">5.1.4. Render 4xx/500 pages with jinja</h4>
+<div class="sect2">
+<h3 id="_render_4xx_500_pages_with_jinja">5.5. Render 4xx/500 pages with jinja</h3>
 <div class="paragraph">
 <p>django-jinja also provides a set of views for easy
 render 4xx/500 pages using jinja engine:</p>
@@ -1119,7 +1124,6 @@ render 4xx/500 pages using jinja engine:</p>
 <span class="tok-n">handler403</span> <span class="tok-o">=</span> <span class="tok-n">views</span><span class="tok-o">.</span><span class="tok-n">PermissionDenied</span><span class="tok-o">.</span><span class="tok-n">as_view</span><span class="tok-p">()</span>
 <span class="tok-n">handler404</span> <span class="tok-o">=</span> <span class="tok-n">views</span><span class="tok-o">.</span><span class="tok-n">PageNotFound</span><span class="tok-o">.</span><span class="tok-n">as_view</span><span class="tok-p">()</span>
 <span class="tok-n">handler500</span> <span class="tok-o">=</span> <span class="tok-n">views</span><span class="tok-o">.</span><span class="tok-n">ServerError</span><span class="tok-o">.</span><span class="tok-n">as_view</span><span class="tok-p">()</span></code></pre>
-</div>
 </div>
 </div>
 </div>
@@ -1301,7 +1305,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-03-14 14:58:42 CET
+Last updated 2015-03-16 16:03:09 CET
 </div>
 </div>
 </body>
